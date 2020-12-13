@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _4DOKMAG
 {
-    public partial class Form1 : Form
+    public partial class DOKMAG : DevExpress.XtraBars.TabForm
     {
-        public Form1()
+        public DOKMAG()
         {
             InitializeComponent();
         }
