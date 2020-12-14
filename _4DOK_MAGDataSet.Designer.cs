@@ -1436,27 +1436,22 @@ namespace _4DOKMAG._4DOK_MAGDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BRUTTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE       DOKMAG
-SET                DATA = @DATA, NUMER_KLIENTA = @NUMER_KLIENTA, NAZWA = @NAZWA, NETTO = @NETTO, BRUTTO = @BRUTTO
-WHERE        (ID_DOKMAG = @Original_ID_DOKMAG) AND (DATA = @Original_DATA) AND (NUMER_KLIENTA = @Original_NUMER_KLIENTA) AND (@IsNull_NAZWA = 1) AND (NAZWA IS NULL) AND (NETTO = @Original_NETTO) AND 
-                         (BRUTTO = @Original_BRUTTO) OR
-                         (ID_DOKMAG = @Original_ID_DOKMAG) AND (DATA = @Original_DATA) AND (NUMER_KLIENTA = @Original_NUMER_KLIENTA) AND (NAZWA = @Original_NAZWA) AND (NETTO = @Original_NETTO) AND 
-                         (BRUTTO = @Original_BRUTTO); 
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DOKMAG] SET [DATA] = @DATA, [NUMER_KLIENTA] = @NUMER_KLIENTA, [NAZWA] = @NAZWA, [NETTO] = @NETTO, [BRUTTO] = @BRUTTO WHERE (([ID_DOKMAG] = @Original_ID_DOKMAG) AND ([DATA] = @Original_DATA) AND ([NUMER_KLIENTA] = @Original_NUMER_KLIENTA) AND ((@IsNull_NAZWA = 1 AND [NAZWA] IS NULL) OR ([NAZWA] = @Original_NAZWA)) AND ([NETTO] = @Original_NETTO) AND ([BRUTTO] = @Original_BRUTTO));
 SELECT ID_DOKMAG, DATA, NUMER_KLIENTA, NAZWA, NETTO, BRUTTO FROM DOKMAG WHERE (ID_DOKMAG = @ID_DOKMAG)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUMER_KLIENTA", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NUMER_KLIENTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAZWA", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NETTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BRUTTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_DOKMAG", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUMER_KLIENTA", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NUMER_KLIENTA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUMER_KLIENTA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUMER_KLIENTA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAZWA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NETTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BRUTTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_DOKMAG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATA", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUMER_KLIENTA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUMER_KLIENTA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NAZWA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NETTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BRUTTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NAZWA", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_DOKMAG", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NAZWA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NETTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BRUTTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_DOKMAG", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1608,7 +1603,7 @@ SELECT ID_DOKMAG, DATA, NUMER_KLIENTA, NAZWA, NETTO, BRUTTO FROM DOKMAG WHERE (I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime DATA, string NUMER_KLIENTA, string NAZWA, decimal NETTO, decimal BRUTTO, int Original_ID_DOKMAG, System.DateTime Original_DATA, string Original_NUMER_KLIENTA, decimal Original_NETTO, decimal Original_BRUTTO, string Original_NAZWA, int ID_DOKMAG) {
+        public virtual int Update(System.DateTime DATA, string NUMER_KLIENTA, string NAZWA, decimal NETTO, decimal BRUTTO, int Original_ID_DOKMAG, System.DateTime Original_DATA, string Original_NUMER_KLIENTA, string Original_NAZWA, decimal Original_NETTO, decimal Original_BRUTTO, int ID_DOKMAG) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(DATA));
             if ((NUMER_KLIENTA == null)) {
                 throw new global::System.ArgumentNullException("NUMER_KLIENTA");
@@ -1632,15 +1627,13 @@ SELECT ID_DOKMAG, DATA, NUMER_KLIENTA, NAZWA, NETTO, BRUTTO FROM DOKMAG WHERE (I
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_NUMER_KLIENTA));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_NETTO));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_BRUTTO));
             if ((Original_NAZWA == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_NAZWA));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_NAZWA));
             }
             this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_NETTO));
             this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_BRUTTO));
@@ -1821,27 +1814,22 @@ SELECT ID_DOKMAG, ID_DOKMAG_ASORT, NAZWA, ILOSC, NETTO, BRUTTO FROM DOKMAG_ASORT
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BRUTTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE       DOKMAG_ASORT
-SET                NAZWA = @NAZWA, ILOSC = @ILOSC, NETTO = @NETTO, BRUTTO = @BRUTTO, ID_DOKMAG = @Original_ID_DOKMAG
-WHERE        (ID_DOKMAG = @Original_ID_DOKMAG) AND (ID_DOKMAG_ASORT = @Original_ID_DOKMAG_ASORT) AND (@IsNull_NAZWA = 1) AND (NAZWA IS NULL) AND (ILOSC = @Original_ILOSC) AND (NETTO = @Original_NETTO) AND 
-                         (BRUTTO = @Original_BRUTTO) OR
-                         (ID_DOKMAG = @Original_ID_DOKMAG) AND (ID_DOKMAG_ASORT = @Original_ID_DOKMAG_ASORT) AND (NAZWA = @Original_NAZWA) AND (ILOSC = @Original_ILOSC) AND (NETTO = @Original_NETTO) AND 
-                         (BRUTTO = @Original_BRUTTO); 
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DOKMAG_ASORT] SET [ID_DOKMAG] = @ID_DOKMAG, [NAZWA] = @NAZWA, [ILOSC] = @ILOSC, [NETTO] = @NETTO, [BRUTTO] = @BRUTTO WHERE (([ID_DOKMAG] = @Original_ID_DOKMAG) AND ([ID_DOKMAG_ASORT] = @Original_ID_DOKMAG_ASORT) AND ((@IsNull_NAZWA = 1 AND [NAZWA] IS NULL) OR ([NAZWA] = @Original_NAZWA)) AND ([ILOSC] = @Original_ILOSC) AND ([NETTO] = @Original_NETTO) AND ([BRUTTO] = @Original_BRUTTO));
 SELECT ID_DOKMAG, ID_DOKMAG_ASORT, NAZWA, ILOSC, NETTO, BRUTTO FROM DOKMAG_ASORT WHERE (ID_DOKMAG = @ID_DOKMAG) AND (ID_DOKMAG_ASORT = @ID_DOKMAG_ASORT)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAZWA", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ILOSC", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 4, "ILOSC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NETTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BRUTTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_DOKMAG", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_DOKMAG_ASORT", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG_ASORT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_DOKMAG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAZWA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ILOSC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 4, "ILOSC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NETTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BRUTTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_DOKMAG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_DOKMAG_ASORT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG_ASORT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NAZWA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ILOSC", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 4, "ILOSC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NETTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BRUTTO", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NAZWA", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_DOKMAG", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_DOKMAG_ASORT", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG_ASORT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NAZWA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NAZWA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ILOSC", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 4, "ILOSC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NETTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "NETTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BRUTTO", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 12, 2, "BRUTTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_DOKMAG_ASORT", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_DOKMAG_ASORT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1984,30 +1972,30 @@ SELECT ID_DOKMAG, ID_DOKMAG_ASORT, NAZWA, ILOSC, NETTO, BRUTTO FROM DOKMAG_ASORT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NAZWA, decimal ILOSC, decimal NETTO, decimal BRUTTO, int Original_ID_DOKMAG, int Original_ID_DOKMAG_ASORT, decimal Original_ILOSC, decimal Original_NETTO, decimal Original_BRUTTO, string Original_NAZWA, int ID_DOKMAG, int ID_DOKMAG_ASORT) {
+        public virtual int Update(int ID_DOKMAG, string NAZWA, decimal ILOSC, decimal NETTO, decimal BRUTTO, int Original_ID_DOKMAG, int Original_ID_DOKMAG_ASORT, string Original_NAZWA, decimal Original_ILOSC, decimal Original_NETTO, decimal Original_BRUTTO, int ID_DOKMAG_ASORT) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_DOKMAG));
             if ((NAZWA == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NAZWA));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NAZWA));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(ILOSC));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(NETTO));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(BRUTTO));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_DOKMAG));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_DOKMAG_ASORT));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_ILOSC));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_NETTO));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_BRUTTO));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(ILOSC));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(NETTO));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(BRUTTO));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ID_DOKMAG));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_ID_DOKMAG_ASORT));
             if ((Original_NAZWA == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_NAZWA));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_NAZWA));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(ID_DOKMAG));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_ILOSC));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_NETTO));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_BRUTTO));
             this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(ID_DOKMAG_ASORT));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2029,8 +2017,8 @@ SELECT ID_DOKMAG, ID_DOKMAG_ASORT, NAZWA, ILOSC, NETTO, BRUTTO FROM DOKMAG_ASORT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NAZWA, decimal ILOSC, decimal NETTO, decimal BRUTTO, int Original_ID_DOKMAG_ASORT, decimal Original_ILOSC, decimal Original_NETTO, decimal Original_BRUTTO, string Original_NAZWA, int ID_DOKMAG, int ID_DOKMAG_ASORT) {
-            return this.Update(NAZWA, ILOSC, NETTO, BRUTTO, ID_DOKMAG, Original_ID_DOKMAG_ASORT, Original_ILOSC, Original_NETTO, Original_BRUTTO, Original_NAZWA, ID_DOKMAG, ID_DOKMAG_ASORT);
+        public virtual int Update(string NAZWA, decimal ILOSC, decimal NETTO, decimal BRUTTO, int Original_ID_DOKMAG, int Original_ID_DOKMAG_ASORT, string Original_NAZWA, decimal Original_ILOSC, decimal Original_NETTO, decimal Original_BRUTTO) {
+            return this.Update(Original_ID_DOKMAG, NAZWA, ILOSC, NETTO, BRUTTO, Original_ID_DOKMAG, Original_ID_DOKMAG_ASORT, Original_NAZWA, Original_ILOSC, Original_NETTO, Original_BRUTTO, Original_ID_DOKMAG_ASORT);
         }
     }
     
