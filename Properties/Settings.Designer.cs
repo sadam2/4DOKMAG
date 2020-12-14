@@ -26,8 +26,7 @@ namespace _4DOKMAG.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SLAWEK;database=4DOK_MAG;user id=superuser;password=123;connection ti" +
-            "meout=60;Persist Security Info=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("_")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

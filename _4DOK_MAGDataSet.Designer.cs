@@ -1642,6 +1642,8 @@ SELECT ID_DOKMAG, DATA, NUMER_KLIENTA, NAZWA, NETTO, BRUTTO FROM DOKMAG WHERE (I
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_NAZWA));
             }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_NETTO));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_BRUTTO));
             this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(ID_DOKMAG));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1657,6 +1659,14 @@ SELECT ID_DOKMAG, DATA, NUMER_KLIENTA, NAZWA, NETTO, BRUTTO FROM DOKMAG WHERE (I
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(System.DateTime DATA, string NUMER_KLIENTA, string NAZWA, decimal NETTO, decimal BRUTTO, int Original_ID_DOKMAG, System.DateTime Original_DATA, string Original_NUMER_KLIENTA, string Original_NAZWA, decimal Original_NETTO, decimal Original_BRUTTO) {
+            return this.Update(DATA, NUMER_KLIENTA, NAZWA, NETTO, BRUTTO, Original_ID_DOKMAG, Original_DATA, Original_NUMER_KLIENTA, Original_NAZWA, Original_NETTO, Original_BRUTTO, Original_ID_DOKMAG);
         }
     }
     

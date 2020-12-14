@@ -264,6 +264,18 @@ namespace _4DOKMAG
             this.tabFormPage1.Name = "tabFormPage1";
             this.tabFormPage1.Text = "Dokumenty magazynowe";
             // 
+            // gitHubBarList
+            // 
+            this.gitHubBarList.Caption = "GitHub";
+            this.gitHubBarList.Id = 0;
+            this.gitHubBarList.Name = "gitHubBarList";
+            // 
+            // tabFormPage1
+            // 
+            this.tabFormPage1.ContentContainer = this.tabFormContentContainer1;
+            this.tabFormPage1.Name = "tabFormPage1";
+            this.tabFormPage1.Text = "Dokumenty magazynowe";
+            // 
             // tabFormContentContainer1
             // 
             this.tabFormContentContainer1.Controls.Add(this.gridDOKMAG);
