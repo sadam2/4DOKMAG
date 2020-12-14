@@ -38,8 +38,8 @@ namespace _4DOKMAG
                 e.Cancel = true;
                 return;
             }
-            dOKMAGTableAdapter.Update(_4DOK_MAGDataSet.DOKMAG);
             dOKMAG_ASORTTableAdapter.Update(_4DOK_MAGDataSet.DOKMAG_ASORT);
+            dOKMAGTableAdapter.Update(_4DOK_MAGDataSet.DOKMAG);
         }
         #endregion
         #region GitHub Info
@@ -100,16 +100,30 @@ namespace _4DOKMAG
             dOKMAGTableAdapter.Update(_4DOK_MAGDataSet.DOKMAG);
         }
 
+        private void gridViewDOKMAG_RowDeleting(object sender, DevExpress.Data.RowDeletingEventArgs e)
+        {
+            DataRow master = gridViewDOKMAG.GetDataRow(gridViewDOKMAG.FocusedRowHandle);
+            DataRow[] childs = master.GetChildRows("FK_DOKMAG_ASORT_DOKMAG");
+            foreach (DataRow child in childs)
+            {
+                child.Delete();
+            }
+            dOKMAG_ASORTTableAdapter.Update(_4DOK_MAGDataSet.DOKMAG_ASORT);
+        }
+
         private void gridViewDOKMAG_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             GridView view = sender as GridView;
-            if (view.FocusedColumn.FieldName == "NETTO" || view.FocusedColumn.FieldName == "BRUTTO")
+            if (view != null)
             {
-                decimal val = 0;
-                if (!Decimal.TryParse(e.Value as String, out val) || val <= 0)
+                if (view.FocusedColumn.FieldName == "NETTO" || view.FocusedColumn.FieldName == "BRUTTO")
                 {
-                    e.Valid = false;
-                    e.ErrorText = "To musi być liczba dodatnia.";
+                    decimal val = 0;
+                    if (!Decimal.TryParse(e.Value as String, out val) || val <= 0)
+                    {
+                        e.Valid = false;
+                        e.ErrorText = "To musi być liczba dodatnia.";
+                    }
                 }
             }
         }
@@ -117,13 +131,16 @@ namespace _4DOKMAG
         private void gridViewDOKMAG_ASORT_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             GridView view = sender as GridView;
-            if (view.FocusedColumn.FieldName == "ILOSC" || view.FocusedColumn.FieldName == "NETTO" || view.FocusedColumn.FieldName == "BRUTTO")
+            if (view != null)
             {
-                decimal val = 0;
-                if (!Decimal.TryParse(e.Value as String, out val) || val <= 0)
+                if (view.FocusedColumn.FieldName == "ILOSC" || view.FocusedColumn.FieldName == "NETTO" || view.FocusedColumn.FieldName == "BRUTTO")
                 {
-                    e.Valid = false;
-                    e.ErrorText = "To musi być liczba dodatnia.";
+                    decimal val = 0;
+                    if (!Decimal.TryParse(e.Value as String, out val) || val <= 0)
+                    {
+                        e.Valid = false;
+                        e.ErrorText = "To musi być liczba dodatnia.";
+                    }
                 }
             }
         }

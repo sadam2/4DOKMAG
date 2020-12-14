@@ -176,6 +176,7 @@ namespace _4DOKMAG
             this.gridViewDOKMAG.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridViewDOKMAG.PreviewFieldName = "NAZWA";
             this.gridViewDOKMAG.MasterRowExpanding += new DevExpress.XtraGrid.Views.Grid.MasterRowCanExpandEventHandler(this.gridViewDOKMAG_MasterRowExpanding);
+            this.gridViewDOKMAG.RowDeleting += new DevExpress.Data.RowDeletingEventHandler(this.gridViewDOKMAG_RowDeleting);
             this.gridViewDOKMAG.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridViewDOKMAG_ValidatingEditor);
             // 
             // colID_DOKMAG
@@ -251,18 +252,6 @@ namespace _4DOKMAG
             this.tabFormControl1.TabStop = false;
             this.tabFormControl1.TitleItemLinks.Add(this.gitHubBarList);
             this.tabFormControl1.SelectedPageChanging += new DevExpress.XtraBars.TabFormSelectedPageChangingEventHandler(this.tabFormControl1_SelectedPageChanging);
-            // 
-            // gitHubBarList
-            // 
-            this.gitHubBarList.Caption = "GitHub";
-            this.gitHubBarList.Id = 0;
-            this.gitHubBarList.Name = "gitHubBarList";
-            // 
-            // tabFormPage1
-            // 
-            this.tabFormPage1.ContentContainer = this.tabFormContentContainer1;
-            this.tabFormPage1.Name = "tabFormPage1";
-            this.tabFormPage1.Text = "Dokumenty magazynowe";
             // 
             // gitHubBarList
             // 
