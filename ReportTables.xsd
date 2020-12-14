@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportTables" targetNamespace="http://tempuri.org/ReportTables.xsd" xmlns:mstns="http://tempuri.org/ReportTables.xsd" xmlns="http://tempuri.org/ReportTables.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportTables" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportTables" msprop:Generator_UserDSName="ReportTables">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DokInfo" msprop:Generator_TableClassName="DokInfoDataTable" msprop:Generator_TableVarName="tableDokInfo" msprop:Generator_TablePropName="DokInfo" msprop:Generator_RowDeletingName="DokInfoRowDeleting" msprop:Generator_RowChangingName="DokInfoRowChanging" msprop:Generator_RowEvHandlerName="DokInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="DokInfoRowDeleted" msprop:Generator_UserTableName="DokInfo" msprop:Generator_RowChangedName="DokInfoRowChanged" msprop:Generator_RowEvArgName="DokInfoRowChangeEvent" msprop:Generator_RowClassName="DokInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_DOKMAG" msdata:Caption="" msprop:Generator_ColumnVarNameInTable="columnID_DOKMAG" msprop:Generator_ColumnPropNameInRow="ID_DOKMAG" msprop:Generator_ColumnPropNameInTable="ID_DOKMAGColumn" msprop:Generator_UserColumnName="ID_DOKMAG" type="xs:int" minOccurs="0" />
+              <xs:element name="Data" msdata:Caption="" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_UserColumnName="Data" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NUMER_KLIENTA" msdata:Caption="" msprop:Generator_ColumnVarNameInTable="columnNUMER_KLIENTA" msprop:Generator_ColumnPropNameInRow="NUMER_KLIENTA" msprop:Generator_ColumnPropNameInTable="NUMER_KLIENTAColumn" msprop:Generator_UserColumnName="NUMER_KLIENTA" type="xs:string" minOccurs="0" />
+              <xs:element name="Nazwa" msdata:Caption="" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_UserColumnName="Nazwa" type="xs:string" minOccurs="0" />
+              <xs:element name="Netto" msdata:Caption="" msprop:Generator_ColumnVarNameInTable="columnNetto" msprop:Generator_ColumnPropNameInRow="Netto" msprop:Generator_ColumnPropNameInTable="NettoColumn" msprop:Generator_UserColumnName="Netto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Brutto" msdata:Caption="" msprop:Generator_ColumnVarNameInTable="columnBrutto" msprop:Generator_ColumnPropNameInRow="Brutto" msprop:Generator_ColumnPropNameInTable="BruttoColumn" msprop:Generator_UserColumnName="Brutto" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AsortInfo" msprop:Generator_TableClassName="AsortInfoDataTable" msprop:Generator_TableVarName="tableAsortInfo" msprop:Generator_TablePropName="AsortInfo" msprop:Generator_RowDeletingName="AsortInfoRowDeleting" msprop:Generator_RowChangingName="AsortInfoRowChanging" msprop:Generator_RowEvHandlerName="AsortInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="AsortInfoRowDeleted" msprop:Generator_UserTableName="AsortInfo" msprop:Generator_RowChangedName="AsortInfoRowChanged" msprop:Generator_RowEvArgName="AsortInfoRowChangeEvent" msprop:Generator_RowClassName="AsortInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_DOKMAG" msprop:Generator_ColumnVarNameInTable="columnID_DOKMAG" msprop:Generator_ColumnPropNameInRow="ID_DOKMAG" msprop:Generator_ColumnPropNameInTable="ID_DOKMAGColumn" msprop:Generator_UserColumnName="ID_DOKMAG" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_DOKMAG_ASORT" msprop:Generator_ColumnVarNameInTable="columnID_DOKMAG_ASORT" msprop:Generator_ColumnPropNameInRow="ID_DOKMAG_ASORT" msprop:Generator_ColumnPropNameInTable="ID_DOKMAG_ASORTColumn" msprop:Generator_UserColumnName="ID_DOKMAG_ASORT" type="xs:int" minOccurs="0" />
+              <xs:element name="Nazwa" msprop:Generator_ColumnVarNameInTable="columnNazwa" msprop:Generator_ColumnPropNameInRow="Nazwa" msprop:Generator_ColumnPropNameInTable="NazwaColumn" msprop:Generator_UserColumnName="Nazwa" type="xs:string" minOccurs="0" />
+              <xs:element name="Ilosc" msdata:Caption="Ilość" msprop:Generator_ColumnVarNameInTable="columnIlosc" msprop:Generator_ColumnPropNameInRow="Ilosc" msprop:Generator_ColumnPropNameInTable="IloscColumn" msprop:Generator_UserColumnName="Ilosc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Netto" msprop:Generator_ColumnVarNameInTable="columnNetto" msprop:Generator_ColumnPropNameInRow="Netto" msprop:Generator_ColumnPropNameInTable="NettoColumn" msprop:Generator_UserColumnName="Netto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Brutto" msprop:Generator_ColumnVarNameInTable="columnBrutto" msprop:Generator_ColumnPropNameInRow="Brutto" msprop:Generator_ColumnPropNameInTable="BruttoColumn" msprop:Generator_UserColumnName="Brutto" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
