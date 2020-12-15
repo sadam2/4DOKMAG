@@ -154,17 +154,20 @@ namespace _4DOKMAG
                 tables.DokInfo.Rows.Clear();
                 tables.AsortInfo.Rows.Clear();
                 DataRow master = gridViewDOKMAG.GetDataRow(gridViewDOKMAG.FocusedRowHandle);
-                DataRow[] childs = master.GetChildRows("FK_DOKMAG_ASORT_DOKMAG");
-                tables.DokInfo.ImportRow(master);
-                foreach (DataRow child in childs)
+                if (master != null)
                 {
-                    tables.AsortInfo.ImportRow(child);
+                    DataRow[] childs = master.GetChildRows("FK_DOKMAG_ASORT_DOKMAG");
+                    tables.DokInfo.ImportRow(master);
+                    foreach (DataRow child in childs)
+                    {
+                        tables.AsortInfo.ImportRow(child);
+                    }
+                    AsortReport subrap = new AsortReport();
+                    subrap.SetDataSource(tables);
+                    DokMagReport rap = new DokMagReport();
+                    ReportViewer.ReportSource = rap;
+                    rap.SetDataSource(tables);
                 }
-                AsortReport subrap = new AsortReport();
-                subrap.SetDataSource(tables);
-                DokMagReport rap = new DokMagReport();
-                ReportViewer.ReportSource = rap;
-                rap.SetDataSource(tables);
             }
         }
         #endregion
